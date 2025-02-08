@@ -21,15 +21,15 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    else if (pid == 0)
+    else if (pid)
     {
-        printf("L identificateur du processus pere = %d", getpid());
+        printf("L identificateur du processus pere = %d\n", getpid());
     }
     
     else
     {
-        printf("L identificateur du processus pere dans processus fils = %d", getppid());
-        printf("L identificateur du processus fils = %d", getpid());
+        printf("L identificateur du processus pere dans processus fils = %d\n", getppid());
+        printf("L identificateur du processus fils = %d\n", getpid());
     }
 
     return 0;
